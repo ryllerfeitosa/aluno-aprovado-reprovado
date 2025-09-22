@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.aluno_aprovado_reprovado.model;
+package model;
 
 import java.util.Scanner;
 
