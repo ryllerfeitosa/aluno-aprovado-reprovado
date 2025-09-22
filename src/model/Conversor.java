@@ -11,7 +11,7 @@ public class Conversor {
     public double somaDasNotas;
     public String nomeDoAluno;
 
-    public void obterDadosDoAluno(){
+    public void obterDadosDoAluno(){    //Nome de função sempre tem que ser um verbo
         Scanner leitor = new Scanner(System.in);
         System.out.println("Dados do aluno(a)");
         System.out.println("--------------");
@@ -42,8 +42,13 @@ public class Conversor {
         if (media >= 5){
             System.out.println("O(a) aluno(a) " + nomeDoAluno + " foi aprovado!");
         }
-        else {
+        else if(media < 4) {  //É preferível utilizar else if ao invés de vários if,
+                             // pois nesse caso ambos estão com a mesma condição
+                             // A execução no else if ocorre em cascata
             System.out.println("O(a) aluno(a) " + nomeDoAluno + " foi reprovado:(");
+        }
+        else{
+            System.out.println("O(a) aluno(a) " + nomeDoAluno + " está de recuperação");
         }
         System.out.println("F I M");
         System.out.println("-----");
